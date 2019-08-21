@@ -27,8 +27,14 @@ model_diagnostics <- function(linear_model, to_plot = TRUE) {
     print('BIC')
     print(BIC(linear_model))
     
+    print('Non-constant Variance Score Test')
+    print('------------------')
+    print(car::ncvTest(linear_model))
+    print('')
+    
     if(to_plot) {
         car::qqPlot(linear_model, type = 'III')
+        car::crPlots(linear_model)
         plot(linear_model, which = 1:6)
     }
 }
