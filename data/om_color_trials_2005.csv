@@ -1,0 +1,40 @@
+"Project Title: ONION MAGGOT/STICKY TRAP PERFORMANCE TRIAL ""COLOR"" JUNE 2005",,,
+Document: ONION MAGGOT STICKY TRAP COLOR TRIAL 2005.docx,,,
+,,,
+IF TRT = 8 THEN TREAT = 'WHITE';,,,
+IF TRT = 10 THEN TREAT = 'YELLOW';,,,
+IF TRT = 11 THEN TREAT = 'GREEN';,,,
+IF TRT = 12 THEN TREAT = 'RED';,,,
+,,,
+acet_title:,om_color_trials,,
+Objective:,Evaluate onion maggot fly attraction to spherical traps of different colors,,
+Method Brief:,Different color spheres were covered with sticky material and placed in the field in 2005.  Male and Female onion maggot stuck to the traps were evaluated,,
+Notes:,,,
+,,,
+,,,
+"Original document and project brief received from Brian Nault in late 2018, data entered into tabular form in this document May 7, 2019",,,
+,,,
+,,,
+,,,
+,,,
+treatment,replication,males,females
+8,1,7,30
+8,2,4,63
+8,3,7,47
+8,4,9,30
+8,5,3,22
+10,1,1,20
+10,2,2,24
+10,3,1,16
+10,4,2,21
+10,5,6,10
+11,1,0,8
+11,2,0,17
+11,3,3,4
+11,4,1,1
+11,5,0,0
+12,1,1,3
+12,2,0,0
+12,3,2,0
+12,4,0,3
+12,5,0,0

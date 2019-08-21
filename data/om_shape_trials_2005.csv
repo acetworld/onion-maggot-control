@@ -1,0 +1,43 @@
+"Project Title: ONION MAGGOT/STICKY TRAP PERFORMANCE TRIAL ""SHAPE"" JUNE 2005",,,
+Document: ONION MAGGOT STICKY TRAP SHAPE TRIAL 2005.docx,,,
+,,,
+IF TRT = 1 THEN TREAT = 'SHCYL';,,,
+IF TRT = 2 THEN TREAT = 'TACYL';,,,
+IF TRT = 3 THEN TREAT = 'CUBE';,,,
+IF TRT = 4 THEN TREAT = 'PANEL';,,,
+IF TRT = 5 THEN TREAT = 'SPHERE';,,,
+,,,
+acet_title:,om_shape_trials,,
+Objective:,Evaluate onion maggot fly attraction to traps of different shapes,,
+Method Brief:,Different shapes were covered with sticky material and placed in the field in 2005.  Male and Female onion maggot stuck to the traps were evaluated,,
+Notes:,SHCYL = short cylinder,,
+,TACYL = Tall cylinder,,
+,"Cube = cube, panel = square panel, sphere = sphere",,
+"Original document and project brief received from Brian Nault in late 2018, data entered into tabular form in this document May 7, 2019",,,
+,,,
+treatment,replication,males,females
+1,1,10,67
+1,2,7,48
+1,3,4,68
+1,4,12,27
+1,5,5,29
+2,1,2,63
+2,2,8,38
+2,3,5,24
+2,4,5,10
+2,5,5,17
+3,1,10,43
+3,2,4,49
+3,3,10,39
+3,4,3,22
+3,5,4,23
+4,1,12,37
+4,2,14,37
+4,3,1,21
+4,4,3,16
+4,5,6,32
+5,1,5,31
+5,2,7,51
+5,3,7,48
+5,4,7,34
+5,5,5,23

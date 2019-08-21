@@ -1,0 +1,51 @@
+﻿"Project title: ONION MAGGOT/STICKY TRAP PERFORMANCE TRIAL ""SIZE"" JUNE 2005",,,
+Document: ONION MAGGOT STICKY TRAP SIZE TRIAL 2005.docx,,,
+,,,
+IF TRT = 5 THEN TREAT = 7.5;,,,
+IF TRT = 6 THEN TREAT = 5.0;,,,
+IF TRT = 7 THEN TREAT = 6.25;,,,
+IF TRT = 8 THEN TREAT = 8.75;,,,
+IF TRT = 9 THEN TREAT = 10.0;,,,
+IF TREAT = 7.5 THEN T = 176.63;,,,
+IF TREAT = 5.0 THEN T = 78.5;,,,
+IF TREAT = 6.25 THEN T = 122.7;,,,
+IF TREAT = 8.75 THEN T = 240.41;,,,
+IF TREAT = 10.0 THEN T = 314;,,,
+,,,
+acet_title:,om_size_trials_2005,,
+Objective:,Evaluate onion maggot fly attraction to traps of different sizes,,
+Method Brief:,Different size spheres were covered with sticky material and placed in the field in 2005.  Male and Female onion maggot stuck to the traps were evaluated,,
+Notes:,Treat size noted above refers to spherical diameter in centimeters,,
+,,,
+,,,
+"Original document and project brief received from Brian Nault in late 2018, data entered into tabular form in this document May 7, 2019",,,
+,,,
+,,,
+,,,
+,,,
+treatment,replication,males,females
+5,1,5,31
+5,2,7,51
+5,3,7,48
+5,4,7,34
+5,5,5,23
+6,1,6,27
+6,2,5,24
+6,3,5,12
+6,4,5,9
+6,5,1,19
+7,1,1,30
+7,2,3,39
+7,3,6,18
+7,4,8,24
+7,5,1,16
+8,1,7,30
+8,2,4,63
+8,3,7,47
+8,4,9,30
+8,5,3,22
+9,1,8,59
+9,2,6,74
+9,3,16,54
+9,4,5,65
+9,5,4,21
