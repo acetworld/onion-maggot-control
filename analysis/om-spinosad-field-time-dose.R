@@ -31,6 +31,14 @@ daily_trap_catch <- field_trap_catch %>%
            date = lubridate::mdy(paste(month, day, '2006')),
            catch = catch * 3)
 
+# Averages for mortality calculations
+daily_trap_catch %>% group_by(month, day, sex) %>% 
+    summarize(weekly_mean = mean(catch)) %>% 
+    ungroup() %>% 
+    group_by(sex) %>% 
+    summarize(max = max(weekly_mean),
+              mean = mean(weekly_mean))
+
 # Plot figure -----------------
 
 # Generate figure

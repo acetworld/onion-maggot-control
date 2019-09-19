@@ -85,7 +85,5 @@ control_eval_figure <- ggplot(control_evaluation, aes(x = control_type, y = emme
 
 # Save figure
 ggsave(plot = control_eval_figure, 
-       filename = './figures/raw-figures/figure5-control-eval.pdf',
+       filename = './figures/raw-figures/figure4-control-eval.pdf',
        width = 5, height = 3)
-
-

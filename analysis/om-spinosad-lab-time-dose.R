@@ -129,6 +129,9 @@ rate_effect_2006 <- emmeans(mortality_mod_2006, ~ rate, type = 'response') %>%
                                       '0.5% Spinosad', 
                                       '1% Spinosad')))
 
+emmeans(mortality_mod_2006, ~ rate, type = 'response') %>% 
+    contrast(method = 'dunnett')
+
 # Plot figure
 figure1b_lab_rate <- ggplot(rate_effect_2006, aes(x = labels, y = emmean)) + 
     geom_point() + 

@@ -49,68 +49,6 @@ field_damage_time <- field_damage %>%
            cumulative_adj = cumulative/initstnd,
            date = as.factor(date))
 
-# Pull out end of season stand numbers
-stand_numbers <- field_damage_time %>% 
-    group_by(treatment, delia_lure, control_type, replication) %>%
-    summarize(starting_stand = first(initstnd),
-              ending_stand = first(finlst)) %>%
-    mutate(loss = starting_stand - ending_stand)
-
-# Model Stand Loss -----------------------
-
-# Basic model for stand loss
-stand_loss_mod <- lm(loss ~ control_type, 
-                     data = stand_numbers)
-model_diagnostics(stand_loss_mod, to_plot = FALSE)
-outlierTest(stand_loss_mod) # Marginal outlier... leave in
-
-# Post hoc analysis based on Tukey's method
-stand_loss_post_hoc <- emmeans(stand_loss_mod, ~ control_type) %>% 
-    CLD(Letters = LETTERS) %>% 
-    data.frame() %>% 
-    mutate(delia_lure = 'Lure')
-
-
-# Stand Loss Figure -----------------
-
-# Plot end of season stand results
-set.seed(72)
-dodge_width = 0.48
-jitter_width = 0.24
-
-stand_loss_figure <- ggplot(stand_numbers, aes(x = control_type, 
-                          y = loss, color = delia_lure)) +
-    geom_point(position = position_jitterdodge(dodge.width = dodge_width,
-                                               jitter.width = jitter_width),
-               alpha = 0.5) + 
-    scale_color_grey() +
-    stat_summary(fun.data = 'mean_cl_boot',
-                 geom = 'point',
-                 position = position_dodge(dodge_width)) + 
-    stat_summary(fun.data = 'mean_cl_boot',
-                 geom = 'errorbar',
-                 position = position_dodge(dodge_width),
-                 width = dodge_width/2) + 
-    labs(x = 'Treatment',
-         y = 'End of Season Onion Loss') + 
-    geom_text(data = stand_loss_post_hoc, aes(x = control_type,
-                                              y = 250, 
-                                              label = .group),
-              show.legend = FALSE) + 
-    pest_management_science + 
-    theme(legend.position = c(0.75, 0.25),
-          axis.line.x = element_line(size = 0.48, linetype = 'solid', 
-                                     color = 'black'),
-          axis.line.y = element_line(size = 0.48, linetype = 'solid', 
-                                     color = 'black')
-    )
-
-# Save Figure
-ggsave(plot = stand_loss_figure,
-       filename = './figures/raw-figures/figure3-stand-loss.pdf',
-       width = 5, height = 3)
-
-
 # Model damage over time -------------------
 
 # Examine distribution of cumulative damage for modeling
@@ -157,11 +95,13 @@ plot_field_damage <- field_damage_time %>%
     mutate(plot_date = lubridate::ymd(date))
 
 # Plot OM Cumulative damage results
+dodge_width = 0.48
+
 cumulative_om_damage_fig <- ggplot(group_differences, 
        aes(x = control_type, y = response, color = delia_lure)) + 
-    geom_point(position = position_dodge(0.48)) + 
+    geom_point(position = position_dodge(dodge_width)) + 
     geom_errorbar(aes(ymin = asymp.LCL, ymax = asymp.UCL),
-                  position = position_dodge(0.48),
+                  position = position_dodge(dodge_width),
                   width = 0.24) + 
     scale_color_grey() + 
     labs(x = 'Treatment',
