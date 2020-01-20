@@ -113,10 +113,17 @@ The authors should add a few sentences describing the field sites (lines 54-56) 
 
 In the discussion section the authors made no mention of using spinosad seed treatment as a management option in conventional and organic onion fields.  Why?? Spinosad (Regard) seed treatment is currently the primary management method for onion maggot in organic onions, and spinosad is an active ingredient in many conventional seed treatments.   Spinosad is an active ingredient in the FI500 seed treatment, and Regard alone often provides a similar level of protection compared to FI500.  Since FI500 resulted in lower maggot damage compared to all "attract and kill" tactics, why would someone recommend attract and kill with spinosad over spinosad seed treatment?   I strongly recommend the authors discuss the advantages, disadvantages, and compatibility of using spinosad seed treatment and spinosad attract & kill.    
 
-
-
+\begin{quote}
+    \textit{This is an excellent point.  We've brought this up and elaborated more on exactly this point in the discussion as well as addressing the advantages and disadvantages of these strategies.  Thanks for the suggestion.  Additions can be found on lines ....
+    }
+\end{quote}
 
 The authors should discuss the implications of onion maggot developing resistance to spinosad using the attract and kill tactic.  e.g. Will the attract and kill tactic with spinosad lead to a higher likelihood of onion maggot developing resistance to spinosad?  This tactic targets egg laying adults, it only provides partial control, and it exposes multiple generations per year to spinosad?   These factors seem to favor resistance. This question is especially relevant as the most popular registered insecticide seed treatments contain spinosad and there are few alternatives in the marketplace.     
+
+\begin{quote}
+    \textit{Also an excellent suggestion.  This is particularly important in systems where options are rapidly disappearing.  We've addressed this in more detail in the discussion on lines ...
+    }
+\end{quote}
 
 \subsection*{Referee 2}
 
@@ -221,25 +228,108 @@ Line 112: aren't these the same thing?
 Line 113: I'd like to get more details about which factors you have used, fixed and random.  
 
 \begin{quote}
-    \textit{}
+    \textit{Thanks for suggesting this inclusion.  We've listed the fixed and random factors used in the analysis on lines ...}
 \end{quote}
 
 Line 115: AIC?, BIC? How did you use these to inform model selection? Considerations: third time this word is used in this sentence.  
 
+\begin{quote}
+    \textit{Good question.  Both were used to avoid overfitting.  As both of these criteria penalize likelihood estimates with increasing factors, these were used in consideration with other factors listed to determine best fit models.  Redundant uses of the word 'considerations' have been removed from the sentence.  
+    }
+\end{quote}
+
 Line 116:  I suggest rewording this sentence. I'm assuming that you are talking about means separation here?
 
-Why use both, why not just one or the other? be more explicit about which model goes with what data. I'd like to see a list of dependent and independent variables and fixed and random effects.I suggest removing such a blanket statement and being more specific as I mentioned above.
+\begin{quote}
+    \textit{Exactly!  We've reworded this sentence to clarify.  Thanks for the suggestion.  }
+\end{quote}
+
+Line 116: Why use both, why not just one or the other? 
+
+\begin{quote}
+    \textit{Tukey HSD test generally is used to evaluate all pairwise comparisons.  Dunnett's test evaluates treatments versus controls.  In some cases we are only interested in comparisons versus controls (more powerful statistically as the correction for the family wise error rate is lower for less comparisons) while in others we are interested in more detailed comparisons.  }
+\end{quote}
+
+Line 117: Be more explicit about which model goes with what data. I'd like to see a list of dependent and independent variables and fixed and random effects.I suggest removing such a blanket statement and being more specific as I mentioned above.
+
+\begin{quote}
+    \textit{Thanks for the suggestion.  We've included more detail about the models and factors used for each datasets on lines ...  In addition, the exact code to run the analysis with annotations and extensive documentation is publicly available on GitHub.  }
+\end{quote}
 
 Line 124: need to mention these where you talk about how you built and selected models. These are the tools you used to do that.
 
+\begin{quote}
+    \textit{Thanks for the suggestion.  Given that these tools were used throughout the analysis, we thought it best to consolidate them here rather than repeatedly mentioning them throughout the text.  }
+\end{quote}
+
 Line 128: I'm not following why showing this data is relevant. You also have not done analysis on it. Suggest incorporating it into the rest of the MS effectively.
+
+\begin{quote}
+    \textit{Thanks for the opportunity to elaborate.  These data are important as they document three generations in upstate New York.  This is crucial because it highlights the importance of targeting the first generation to prevent further damage throughout the season.  While the these data are often mentioned, this figure is important to practitioners in New York state for reference and management decisions.  Generalized additive models with cubic splines were used to highlight trends in data for management professionals.  }
+\end{quote}
 
 Line 129: What period was this? Be more specific
 
-Line 130: how were they sexed? Mention in the methods.  
+\begin{quote}
+    \textit{Excellent opportunity to clarify.  Thanks.  We've added details to lines ...}
+\end{quote}
 
 Line 131: delete "roughly"
 
+\begin{quote}
+    \textit{Excellent suggestion.  'Roughly' has been deleted.  }
+\end{quote}
+
 Line 133: What do you mean? Significantly different? Different from what?
+
+\begin{quote}
+    \textit{Great opportunity to clarify.  This has been explained on lines...}
+\end{quote}
+
+Line 143: Was this peak significantly different from the other times?
+
+\begin{quote}
+    \textit{Interesting question.  While we did not specifically test for this, peaks were either markedly reduced or noticeably absent for subsequent times in Figure 3.  }
+\end{quote}
+
+Line 154: This is compared to what?
+
+\begin{quote}
+    \textit{This comparison was made to spinosad spheres alone - specifics have been addded to lines ...}
+\end{quote}
+
+Line 155: I have a hard time with the letters above bars on this figure. I didn't see the darker colored 'A's. Usually 'A' is used for the highest numbers.
+
+\begin{quote}
+    \textit{Thanks for this suggestion.  We've updated the colors to make this darker.  The lettering scheme was chosen to read alphabetically from left to right.  }
+\end{quote}
+
+Line 155: Was this significant?
+
+\begin{quote}
+    \textit{Great question.  It was indeed significant.  Details have now been included in lines ...}
+\end{quote}
+
+Line 157: be more specific about what treatments.  
+
+\begin{quote}
+    \textit{In this case treatment was with the attract and kill strategies.  Details have been added to lines ...}
+\end{quote}
+
+Line 159: are there any F-values or model results to go along with this?
+
+\begin{quote}
+    \textit{Thanks for the opportunity to add more detail.  Additional model statistics have been included on lines ...}
+\end{quote}
+
+\textbf{
+Line 162: The discussion and introduction seems to have been written by different people. The language used in the discussion is much more "fuzzy" than in the intro. I suggest re-wording much of the discussion to make it less wordy and repetitive and place the findings into a larger context.
+}
+
+Line 167: was this personal observation or speculation?
+
+Line 169: Suggest simplifying this paragraph, its a long and convoluted way of saying that dose didn't matter.
+
+
 
 \end{document}
