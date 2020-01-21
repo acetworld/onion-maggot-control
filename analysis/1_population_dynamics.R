@@ -13,8 +13,8 @@
 library(tidyverse)
 library(car)
 library(emmeans)
-source('./analysis/model_diagnostics.R')
-source('./analysis/pest_management_science_theme.R')
+source('./analysis/0_model_diagnostics.R')
+source('./analysis/0_pest_management_science_theme.R')
 
 # Load Data ------------------
 field_trap_catch <- read_csv('./data/om-spinosad-field-time-dose-trial-2006.csv', skip = 8)

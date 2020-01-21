@@ -14,8 +14,8 @@ library(tidyverse)
 library(car)
 library(emmeans)
 library(lme4)
-source('./analysis/model_diagnostics.R')
-source('./analysis/pest_management_science_theme.R')
+source('./analysis/0_model_diagnostics.R')
+source('./analysis/0_pest_management_science_theme.R')
 
 
 # Load data -----------
@@ -103,7 +103,7 @@ cumulative_om_damage_fig <- ggplot(group_differences,
     geom_errorbar(aes(ymin = asymp.LCL, ymax = asymp.UCL),
                   position = position_dodge(dodge_width),
                   width = 0.24) + 
-    scale_color_grey() + 
+    scale_color_grey(start = 0.1, end = 0.5) + 
     labs(x = 'Treatment',
          y = 'Cumulative Onion Maggot Damage') + 
     geom_text(aes(y = 44, label = .group),

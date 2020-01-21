@@ -14,8 +14,8 @@ library(tidyverse)
 library(car)
 library(emmeans)
 library(ggpubr)
-source('./analysis/model_diagnostics.R')
-source('./analysis/pest_management_science_theme.R')
+source('./analysis/0_model_diagnostics.R')
+source('./analysis/0_pest_management_science_theme.R')
 
 # Load Data ------------------
 
@@ -90,7 +90,7 @@ figure1a_lab_mortality <- ggplot(mortality_rate_2006, aes(x = month, y = mortali
     geom_point(position = position_jitterdodge(dodge.width = dodge_width,
                                                jitter.width = jitter_width),
                alpha = 0.48) + 
-    scale_color_grey() + 
+    scale_color_grey(start = 0.1, end = 0.6) + 
     labs(x = 'Months of Exposure', y = 'Mortality of Onion Maggot Fly Adults') + 
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) + 
     theme_bw() + 
@@ -207,7 +207,9 @@ daily_mortality_figure <- ggplot(daily_mortality, aes(x = hours, y = mortality_r
     scale_x_continuous(breaks = c(0,24,48,72)) + 
     labs(y = 'Onion Maggot Mortality Rate',
          x = 'Hours Post Introduction') + 
-    theme_bw() 
+    theme_bw() +
+    theme(panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank())
 
 # Save daily mortality figure
 ggsave(plot = daily_mortality_figure,
