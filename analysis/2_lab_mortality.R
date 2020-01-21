@@ -68,6 +68,7 @@ mortality_mod_2006 <- lm(mortality_rate ~ rate + month,
                     data = mortality_rate_2006)
 model_diagnostics(mortality_mod_2006, to_plot = FALSE)
 
+emmeans(mortality_mod_2006, ~rate + month) %>% contrast()
 
 # Raw data figure ---------------------------
 

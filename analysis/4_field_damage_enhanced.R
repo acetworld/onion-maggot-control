@@ -68,6 +68,8 @@ rcompanion::nagelkerke(field_damage_mod, null_damage_mod)
 rmse <- resid(field_damage_mod)^2 %>% mean() %>% sqrt()
 cv_rmse <- rmse/mean(field_damage_time$cumulative)
 
+emmeans(field_damage_mod, ~ control_type) %>% contrast(method = 'pairwise')
+
 # Post hoc contrasts
 control_evaluation <- emmeans(field_damage_mod, ~ control_type) %>% 
     CLD(Letters = LETTERS, 
