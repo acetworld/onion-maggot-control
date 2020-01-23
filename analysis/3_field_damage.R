@@ -84,7 +84,7 @@ cv_rmse <- rmse/mean(field_damage_time$cumulative)
 
 # Post-hoc
 group_differences <- emmeans(damage_mod, ~ control_type * delia_lure, type = 'response') %>% 
-    CLD(Letters = LETTERS) %>%
+    CLD(Letters = LETTERS, reversed = TRUE) %>%
     mutate(.group = str_trim(.group))
 
 lure_differences <- emmeans(damage_mod, ~ control_type * delia_lure, type = 'response') %>% 
@@ -105,7 +105,7 @@ cumulative_om_damage_fig <- ggplot(group_differences,
                   width = 0.24) + 
     scale_color_grey(start = 0.1, end = 0.5) + 
     labs(x = 'Treatment',
-         y = 'Cumulative Onion Maggot Damage') + 
+         y = 'Cumulative Onion Maggot Damage \n (Number of Dead Plants)') + 
     geom_text(aes(y = 44, label = .group),
               show.legend = FALSE,
               position = position_dodge(dodge_width)) + 

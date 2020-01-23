@@ -46,7 +46,7 @@ population_figure <- ggplot(daily_trap_catch, aes(x = date, y = catch, shape = s
                      color = sex, linetype = sex, fill = sex)) + 
     stat_smooth(method = "gam", formula = y ~ s(x, bs = "cs")) + 
     geom_point(alpha = 0.48) + 
-    scale_color_grey() +
+    scale_color_grey(start = 0.1, end = 0.4) +
     scale_fill_grey() + 
     scale_x_date(expand = c(0,0)) +
     labs(x = '', y = 'Onion Maggot Trap Catch') + 

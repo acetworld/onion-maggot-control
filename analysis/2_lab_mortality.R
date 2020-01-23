@@ -123,7 +123,7 @@ ggsave(plot = figure1a_lab_mortality,
 
 # Post-hoc CLD/Tukey examination of marginal means for rate
 rate_effect_2006 <- emmeans(mortality_mod_2006, ~ rate, type = 'response') %>% 
-    CLD(Letters = LETTERS) %>% 
+    CLD(Letters = LETTERS, reversed = TRUE) %>% 
     data.frame() %>% 
     mutate(labels = factor(rate, levels = c('CK', 'LO', 'HI'),
                            labels = c('No Spinosad', 

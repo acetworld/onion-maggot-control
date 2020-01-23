@@ -81,7 +81,7 @@ control_eval_figure <- ggplot(control_evaluation, aes(x = control_type, y = emme
     geom_point() + 
     geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL)) + 
     labs(x = 'Treatment',
-         y = 'Cumulative Onion Maggot Damage') + 
+         y = 'Cumulative Onion Maggot Damage \n (Number of Dead Plants)') + 
     geom_text(aes(label = .group, y = 66)) + 
     pest_management_science
 
@@ -89,3 +89,4 @@ control_eval_figure <- ggplot(control_evaluation, aes(x = control_type, y = emme
 ggsave(plot = control_eval_figure, 
        filename = './figures/raw-figures/figure4-control-eval.pdf',
        width = 5, height = 3)
+
