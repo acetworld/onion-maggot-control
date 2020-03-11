@@ -58,6 +58,11 @@
   \@amsrefstrue
 }
 
+%% Remove brackets for numbered references
+\makeatletter % Reference list option change
+\renewcommand\@biblabel[1]{#1} % from [1] to 1
+\makeatother %
+
 %% Option for blind review
 \DeclareOption{blind}{\@blindreviewtrue}
 
@@ -602,8 +607,8 @@
 
 % References
 \if@numrefs
-  \RequirePackage[numbers]{natbib}
-  \bibliographystyle{vancouver-authoryear}
+  \RequirePackage[super, compress, numbers]{natbib}
+  \bibliographystyle{vancouver}
 \fi
 \if@alpharefs
     \RequirePackage{natbib}
